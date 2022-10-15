@@ -11,5 +11,5 @@ a=int(input())
 b=int(input())
 for i in range(1,10000):
     if prime(i+a+b)==1:
-        print(i)
-        break
+         print(i)
+         break
