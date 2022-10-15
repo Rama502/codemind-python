@@ -1,17 +1,23 @@
-n=int(input())
-m=int(input())
-for i in range(n,m+1):
-    l=i
-    s=i
-    c=0
-    f=0
-    while l!=0:
-        r=l%10
-        c+=1
-        if r==0:
+def selfdiv(a):
+    temp=a
+    flag=0
+    while temp>0:
+        rem=temp%10
+        if rem==0:
+            flag=0
             break
-        if s%r==0:
-            f+=1
-        l=l//10
-    if f==c:
-        print(i,end=' ')
+        if a%rem==0:
+            flag=1
+            temp//=10
+        else:
+            flag=0
+            break
+    if flag==1:
+        return 1
+    else:
+        return 0
+a=int(input())
+b=int(input())
+for i in range(a,b+1):
+    if selfdiv(i)==1:
+        print(i,end=" ")
