@@ -1,19 +1,15 @@
-n=int(input())
-arr=[]
-t=0
-s=0
-while n!=0:
-    r=n%10
-    t=t*10+r
-    n//=10
-while t!=0:
-    r=t%10
-    arr.append(r)
-    s+=1
-    t//=10
-for i in range(0,s):
-    if arr[i]==6:
-        arr[i]=9
-        break
-for i in range(0,s):
-    print(arr[i],end="")
+a=int(input())
+b=c=d=r=rev=0
+while a>0:
+    b=a%10
+    a//=10
+    r=r*10+b
+while r>0:
+    c=r%10
+    r//=10
+    if d<1:
+        if c==6:
+            c=9
+            d=1
+    rev=rev*10+c
+print(rev)
