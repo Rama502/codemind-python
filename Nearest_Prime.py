@@ -8,7 +8,7 @@ def prime(a):
     else:
         return 0
 def near(a):
-    l=f=dl=df=0
+    i=f=dl=df=0
     for i in range(a,0,-1):
         if prime(i)==1:
             f=i
@@ -29,4 +29,3 @@ t=int(input())
 for i in range(t):
     a=int(input())
     print(near(a))
-        
