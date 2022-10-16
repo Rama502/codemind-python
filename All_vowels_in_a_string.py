@@ -13,7 +13,7 @@ for i in s:
             b.append(j)
         elif j=='u':
             b.append(j)
-        if j=='A':
+        elif j=='A':
             c.append(j)
         elif j=='E':
             c.append(j)
@@ -31,4 +31,3 @@ elif m==5:
     print('True')
 else:
     print('False')
-            
