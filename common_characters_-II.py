@@ -1,21 +1,11 @@
-s1=str(input())
-s2=str(input())
-a=s1.lower()
-b=s2.lower()
-d=list(a)
-e=list(b)
-f=[]
-g=[]
-c='abcdefghijklmnopqrstuvwxyz'
-for i in d:
-    if i!="":
-        if i in e:
-            f.append(i)
-for i in e:
-    if i!="":
-        if i in d:
-            f.append(i)
-for i in c:
-    if i in f:
-        g.append(i)
-print(len(g))
+x=input().lower()
+y=input().lower()
+l=[]
+c=0
+for i in x:
+    if i in y:
+        l.append(i)
+for j in sorted(set(l)):
+    if j!=' ':
+        c+=1
+print(c)
