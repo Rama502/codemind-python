@@ -1,11 +1,9 @@
-n=input()
+s=input()
+v='aeiouAEIOU'
 c=0
-b=[]
-for i in n:
-    if i in 'aeiouAEIOU':
-        c=c+1
-        if i not in b:
-            print(i,end=' ')
-            b.append(i)
+for i in sorted(set(s),key=s.index):
+    if i in v:
+        c+=1
+        print(i,end=" ")
 if c==0:
     print('-1')
