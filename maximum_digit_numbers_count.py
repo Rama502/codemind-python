@@ -1,11 +1,11 @@
-a=int(input())
-b=input()
-arr=list(b.split())
-mi=0
-for i in arr:
-    if len(i)>mi:
-        mi=len(i)
+n=int(input())
+m=0
 c=0
-for i in arr:
-    if len(i)==mi:
-        print(i,end=" ")
+a=list(map(int,input().split()))
+for i in a:
+    l=len(str(i))
+    if m<l:
+        m=l
+for i in a:
+    if len(str(i))==m:
+        print(i,end=' ')
