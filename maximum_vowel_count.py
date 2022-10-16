@@ -1,13 +1,11 @@
-n=str(input())
-a=n.lower()
-b=n.split()
-d='aeiou'
-m=[]
-for i in b:
+x=list(map(str,input().split()))
+n=[]
+s=0
+I=['a','e','i','o','u']
+for i in x:
+    for j in i:
+        if j in I:
+            s+=1
+    n.append(s)
     s=0
-    c=list(i)
-    for j in c:
-        if j in d:
-            s=s+1
-    m.append(s)
-print(max(m))
+print(max(n))
