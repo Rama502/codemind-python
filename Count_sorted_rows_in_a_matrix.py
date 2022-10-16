@@ -1,18 +1,10 @@
-def sor(l):
-    m=sorted(l)
-    n=sorted(l,reverse=True)
-    if l==m or l==n:
-        return l
-a,b=map(int,input().split())
-mat=[]
+n,m=map(int,input().split())
 c=0
-for i in range(a):
-    x=list(map(int,input().split()))
-    mat.append(x)
-for i in range(a):
-    z=[]
-    for j in range(b):
-        z.append(mat[i][j])
-    if sor(z):
+for i in range(n):
+    a=list(map(int,input().split()))
+    b=a.copy()
+    b.sort()
+    q=b[::-1]
+    if a==b or a==q:
         c+=1
 print(c)
