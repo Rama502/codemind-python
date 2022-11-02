@@ -1,16 +1,11 @@
-a=input()
-c=f=0
-for i in a:
-    c=0
-    for j in a:
-        if i==j:
-            c=c+1
-    if c==1:
-        f=1
-    if c!=1:
-        f=0
+b=input()
+c=[]
+for i in b:
+    c.append(i)
+#print(c)
+for i in c:
+    if ((c.count(i))>1):
+        print("Not Unique Number")
         break
-if(f==1):
-    print("Unique Number")
 else:
-    print("Not Unique Number")
+    print("Unique Number")
